@@ -11,6 +11,7 @@ try{
     $base -> exec("SET CHARACTER SET utf8");
 
     $sql ="SELECT * FROM datos where id =:n_id and departamento=:dep2";
+    
     $resultado = $base->prepare($sql);
     $resultado->execute(array(":n_id"=>$id,":dep2"=>$dep));
     // $registro2 = $resultado->fetch(PDO::FETCH_ASSOC);

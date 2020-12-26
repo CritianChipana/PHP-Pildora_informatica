@@ -16,9 +16,15 @@ try{
     // foreach($registro2 as $key){
     //    print_r($registro2['email']);
     // }
+    // $registro = $resultado->fetch(PDO::FETCH_ASSOC);
+    while($registro = $resultado->fetch(PDO::FETCH_ASSOC)){
+        echo  $registro['nombre'] ;     ?><br><?php
+        echo $registro['email'];        ?><br><?php
+        echo $registro['telefono'];     ?><br><?php
+        echo $registro['departamento']; ?><br><?php
+        echo $registro['email'];        ?><br><?php
+        echo $registro['comentario'];   ?><br><?php
 
-    while($registro =$resultado->fetch(PDO::FETCH_ASSOC)){
-        echo "datos: ". $registro['nombre'];
     }
     $resultado->closeCursor();
 
